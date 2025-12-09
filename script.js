@@ -23,7 +23,7 @@ var timerStarted = false;
 
 function checkInput() {
   alert("Continue to the next game if you wish to save Eric...");
-  window.location.href = "https://ncfvx9.csb.app/"; // redirect to next sandbox
+  window.location.href = "https://1o-o7.github.io/JV-MirrorEscapeRoom/"; // redirect to next sandbox
   // You can call whatever function you want next here
 }
 
@@ -140,7 +140,7 @@ function horn_check() {
 
 function Restart() {
   alert("Restart, Hurry Eric Doesn't have much time!");
-  window.location.href = "https://6t2sjx.csb.app/";
+  window.location.href = "https://olive344.github.io/TargetEscapeRoom/";
 }
 //-------------TIMER----------------//
 var countdown = document.getElementById("countdown");
@@ -167,3 +167,4 @@ function startTimer() {
 window.onload = function () {
   showInstructions();
 };
+
