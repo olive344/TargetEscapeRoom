@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- link the CSS file -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- show a name on the tab -->
+    <title>Escape Room!</title>
+    <!-- add a little image on the tab -->
+    <!-- https://favicon.io/favicon-converter/ -->
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+  </head>
+  <body>
+    <!-- children of the body element -->
+    <div class="ColumnA">
+      <div class="extraBox"></div>
+      <div class="artBox center-content">
+        <img src="images/artTheClown.png" />
+      </div>
+    </div>
+    <div class="ColumnB">
+      <div class="note">
+        <img src="images/DaNote.png" onclick="showNote()" class="clickable2" />
+      </div>
+      <div class="Row1"></div>
+      <div class="Row2">
+        <div class="topBox center-content">
+          <img
+            src="images/Target_Bullseye-Red.png"
+            class="clickable2"
+            onclick=" targetChange(this)"
+            id="target1"
+          />
+        </div>
+        <div class="topBox center-content">
+          <img
+            src="images/target_Bullseye-Blue.png"
+            class="clickable2"
+            onclick="targetChange(this)"
+            id="target2"
+          />
+        </div>
+        <div class="topBox center-content">
+          <img
+            src="images/green.png"
+            class="clickable2"
+            onclick="targetChange(this)"
+            id="target3"
+          />
+        </div>
+        <div class="topBox center-content">
+          <img
+            src="images/Orange.png"
+            class="clickable2"
+            id="target4"
+            onclick="targetChange(this)"
+          />
+        </div>
+        <div class="topBox center-content">
+          <img
+            src="images/Target_Bullseye-Magenta.png"
+            class="clickable2"
+            id="target5"
+            onclick="targetChange(this)"
+          />
+        </div>
+      </div>
+      <div class="Row3"></div>
+      <div class="Row4">
+        <div class="bottomBox center-content">
+          <img
+            src="images/Orange.png"
+            class="clickable2"
+            id="target6"
+            onclick="targetChange(this)"
+          />
+        </div>
+        <div class="bottomBox center-content">
+          <img
+            src="images/Target_Bullseye-Purple.png"
+            class="clickable2"
+            id="target7"
+            onclick="targetChange(this)"
+          />
+        </div>
+        <div class="bottomBox center-content">
+          <img
+            src="images/Target_Bullseye-Magenta.png"
+            class="clickable2"
+            id="target8"
+            onclick="targetChange(this)"
+          />
+        </div>
+        <div class="bottomBox center-content">
+          <img
+            src="images/Target_Bullseye-Red.png"
+            class="clickable2"
+            id="target9"
+            onclick="targetChange(this)"
+          />
+        </div>
+      </div>
+      <div class="Row5 center-content">
+        <img
+          src="images/Instruction_Icon.png"
+          class="clickable2"
+          onclick="showInstructions()"
+        />
+      </div>
+    </div>
+    <div class="ColumnC center-content">
+      <div class="inventory img">
+        <img
+          src="images/inventory.png"
+          onclick="showInventory()"
+          class="clickable2"
+        />
+      </div>
+
+      <img src="images/key.png" />
+      <div class="timer-container">
+        <span id="countdown">90</span>
+      </div>
+    </div>
+
+    <div class="modal center-content" id="note">
+      <span class="close" onclick="hideNote()">&times;</span>
+      <div class="modal-body center-content img">
+        <img src="images/updatedLetter.png" />
+      </div>
+    </div>
+
+    <!-- INVENTORY MODAL -->
+    <div class="modal center-content" id="inventory">
+      <span class="close" onclick="hideInventory()">&times;</span>
+      <div class="modal-body3">
+        <div class="modalRow black">
+          <div class="BoxRow dark-grey center-content">
+            <img src="images/TrapWord.png" />
+          </div>
+          <div class="BoxRow black center-content">
+            <img src="images/FunHouseWord.png" />
+          </div>
+        </div>
+        <div class="modalRow dark-grey">
+          <div class="BoxRow black center-content">
+            <img src="images/WithinWord.png" />
+          </div>
+          <div class="BoxRow dark-grey"></div>
+        </div>
+      </div>
+    </div>
+    <!--Instructions Modal-->
+    <div class="modal center-content" id="Instructions">
+      <span class="close" onclick="hideInstructions()">&times;</span>
+      <div class="modal-body center-content">
+        <img src="images/Art2.png" />
+        <img src="images/DaInstructions.png" />
+      </div>
+    </div>
+
+    <!--Time Up Modal-->
+    <div class="modal center-content" id="TimeUp">
+      <div class="modal-body2 center-content">
+        <img src="images/ArtCaughtYou.png" />
+        <img
+          src="images/tryAgainIcon.png"
+          class="clickable2"
+          onclick="Restart()"
+        />
+      </div>
+    </div>
+
+    <!--Within Word Pop Up-->
+    <div class="modal center-content" id="WithinWord">
+      <div class="modal-body2 center-content img2">
+        <img src="images/ClickButtonInstructions.png" />
+        <img
+          src="images/Within.png"
+          class="clickable2"
+          onclick="checkInput()"
+        />
+      </div>
+    </div>
+
+    <!-- sounds -->
+    <audio src="sounds/Clown-Horn-Sound-Effect.mp3" id="clownHorn"></audio>
+    <audio src="sounds/chainsaw.mp3" id="timeUpSound"></audio>
+    <audio src="sounds/wrong_soundEffect.mp3" id="wrong"></audio>
+    <audio
+      src="sounds/Children Yay Sound Effect (HD).mp3"
+      id="yay_effect"
+    ></audio>
+    <script src="script.js"></script>
+  </body>
+</html>
