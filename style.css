@@ -180,7 +180,7 @@ img2 {
   margin: 0;
 }
 .modal-body2 {
-  display: flex;
+  display: block;
   width: 95%;
   height: 80%;
   background-color: #080808;
