@@ -25,8 +25,7 @@ var horn_done = false;
 
 function checkInput() {
   alert("Continue to the next game if you wish to save Eric...");
-  window.location.href = "https://1o-o7.github.io/JV-MirrorEscapeRoom/ 
-"; // redirect to next sandbox
+  window.location.href = "https://1o-o7.github.io/JV-MirrorEscapeRoom/"; // redirect to next sandbox
   // You can call whatever function you want next here
 }
 
@@ -179,4 +178,3 @@ function startTimer() {
 window.onload = function () {
   showInstructions();
 };
-
